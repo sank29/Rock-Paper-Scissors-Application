@@ -25,7 +25,7 @@ public class GameController {
 		
 		if(choice.equalsIgnoreCase("Rock") || choice.equalsIgnoreCase("Paper") || choice.equalsIgnoreCase("Scissors")) {
 			
-			ClientResponse clientResponse = computerService.getGameResult(choice);
+			ClientResponse clientResponse = computerService.getGameResult(choice.toLowerCase());
 			
 			return new ResponseEntity<ClientResponse>(clientResponse, HttpStatus.ACCEPTED);
 			
