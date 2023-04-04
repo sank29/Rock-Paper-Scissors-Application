@@ -119,9 +119,10 @@ public class ComputerServiceImpl implements ComputerService {
 	public Integer generateRandomValue() {
 		
 		Random randomClass = new Random();
-		
+		// min will be zero
 		int min = 0;
 		
+		// max will be two
 		int max = 2;
 		
 		Integer randomNumber = randomClass.nextInt(max - min + 1) + min;
