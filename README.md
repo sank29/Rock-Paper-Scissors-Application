@@ -41,3 +41,13 @@ This is the rest API application. You can play the Rock Paper Scissors game with
 #Whether a "NoHandlerFoundException" should be thrown if no Handler was found to process a request.
 - spring.mvc.throw-exception-if-no-handler-found=true
 - spring.web.resources.add-mappings=false
+
+## API Root and Endpoint
+
+```
+https://localhost:8888/
+```
+
+```
+http://localhost:8888/swagger-ui/index.html
+```
