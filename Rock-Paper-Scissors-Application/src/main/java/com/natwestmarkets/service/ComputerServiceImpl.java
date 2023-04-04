@@ -32,8 +32,8 @@ public class ComputerServiceImpl implements ComputerService {
 		// check player choice and computer choice is same if yes then return tie.
 		
 		if(choice.equals(computerChoice)) {
-			
-			 clientResponse.setFinalResult(computerChoice);
+			 
+			 clientResponse.setFinalResult("It is a tie");
 			 
 			 return clientResponse;
 			 
