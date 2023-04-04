@@ -5,7 +5,9 @@ import lombok.Data;
 @Data
 public class ClientResponse {
 	
-	private String message;
+	private String computerChoice;
+	
+	private String finalResult;
 	
 }
 
