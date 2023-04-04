@@ -23,6 +23,8 @@ public class GameController {
 	@GetMapping("/play/{choice}")
 	public ResponseEntity<ClientResponse>  getPlayerChoice(@PathVariable("choice") String choice) throws ChoiceException { 
 		
+		// It will going to check input ignoring lower or upper case
+		
 		if(choice.equalsIgnoreCase("Rock") || choice.equalsIgnoreCase("Paper") || choice.equalsIgnoreCase("Scissors")) {
 			
 			ClientResponse clientResponse = computerService.getGameResult(choice.toLowerCase());
@@ -30,6 +32,7 @@ public class GameController {
 			return new ResponseEntity<ClientResponse>(clientResponse, HttpStatus.ACCEPTED);
 			
 		}else {
+			// Throw exception if input is not valid
 			
 			throw new ChoiceException("Please enter valid choice between this Rock, Paper and Scissors");
 			
